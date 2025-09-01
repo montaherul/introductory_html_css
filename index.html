@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh</title>
+    <style> 
+        .container {
+            background: linear-gradient(to bottom right, red, green);
+            color: white;
+            padding: 20px;
+        }
+        .highlight {
+            color: goldenrod;
+        }
+        .content {
+            
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 20px;
+            color: white;
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif ;
+            text-align: left;
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+
+        }
+        .highlight:hover{
+            transform: skew(30deg) scale(1.1);
+            transition: 2s;
+            color: red;
+        }
+        #bangladesh-image {
+
+            max-width: 100%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 1em auto;
+
+        }
+        #bangladesh-image:hover{
+            transform: rotate(360deg);
+            transition: 2s;
+        }
+        .places {
+              box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .place {
+            background: linear-gradient(to bottom right,red, green);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .place img {
+            max-width: 100%;
+            height: 400px;
+            width: 400px;
+
+            border-radius: 5px;
+        }
+        .place img:hover{
+           
+        transform: scale(.5);
+        transition: 2s;
+    
+         }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome<br> to <br><span class="highlight"> Bangladesh</span></h1>
+            <img id="bangladesh-image" src="Bangladesh.jpg" alt="Bangladesh" >
+        </div>
+    </div>
+    <div class="places">
+        <div class="place">
+            <img src="https://bdscenictours.b-cdn.net/wp-content/uploads/2019/11/Exploring-Coxs-Bazar.jpg" alt="Place 1">
+            <h1>Cox's Bazar</h1>
+        </div>
+        <div class="place">
+            <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/06/29/983a5752ef7bdbf6b5465197e079e85f_1000x1000.jpg" alt="Place 2">
+            <h1>Bandarban</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Martins_Island_with_boats_in_foreground.jpg" alt="Place 3">
+            <h1>Saint Martin's Island</h1>
+        </div>
+        <div class="place">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Teesta_Barrage_Bangladesh.jpg/330px-Teesta_Barrage_Bangladesh.jpg" alt="Place 4">
+            <h1>Teesta Barrage Rangpur</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0.jpg/1280px-%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0.jpg" alt="Place 4">
+            <h1>Rajshahi Division</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bangladesh_Agricultural_University_%28BAU%29.jpg/330px-Bangladesh_Agricultural_University_%28BAU%29.jpg" alt="Place 5">
+            <h1>Bangladesh Agricultural University Mymensingh</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Dhaka_April_%2833244268934%29.jpg/330px-Dhaka_April_%2833244268934%29.jpg" alt="Place 6">
+            <h1>The Capital Dhaka</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/%E0%A6%B7%E0%A6%BE%E0%A6%9F-%E0%A6%97%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%81%E0%A6%9C-%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6.jpg/330px-%E0%A6%B7%E0%A6%BE%E0%A6%9F-%E0%A6%97%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%81%E0%A6%9C-%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6.jpg" alt="Place 7">
+            <h1>Khulna</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Kuakata_beach_at_morning.jpg" alt="Place 4">
+            <h1>Kuakata Beach Barishal</h1>
+        </div>
+        <div class="place">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Chittagong_Port.jpg/960px-Chittagong_Port.jpg" alt="Place 8">
+            <h1>Chittagong Port</h1>
+        </div>
+        
+
+    </div>
+</body>
+</html>

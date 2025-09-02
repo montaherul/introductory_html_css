@@ -1,136 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangladesh</title>
-    <style> 
-        .container {
-            background: linear-gradient(to bottom right, red, green);
-            color: white;
-            padding: 20px;
-        }
-        .highlight {
-            color: goldenrod;
-        }
-        .content {
-            
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 20px;
-            color: white;
-            font-size: 60px;
-            font-family: 'Times New Roman', Times, serif ;
-            text-align: left;
-            grid-template-columns: repeat(2, 1fr);
-            display: grid;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangladesh</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-        }
-        .highlight:hover{
-            transform: skew(30deg) scale(1.1);
-            transition: 2s;
-            color: red;
-        }
-        #bangladesh-image {
+    /* NAVIGATION */
+    nav {
+      background: linear-gradient(to right, green, red);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: goldenrod;
+    }
 
-            max-width: 100%;
-            height: auto;
-            border: 2px solid white;
-            border-radius: 5px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: block;
-            margin: 1em auto;
+    /* HEADER SECTION */
+    .container {
+      background: linear-gradient(to bottom right, green, red);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .highlight {
+      color: goldenrod;
+      transition: 0.5s;
+    }
+    .highlight:hover {
+      transform: skew(10deg) scale(1.1);
+      color: red;
+    }
+    .content h1 {
+      font-size: 60px;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+    }
+    #bangladesh-image {
+      max-width: 250px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    #bangladesh-image:hover {
+      transform: rotate(360deg);
+      transition: 2s;
+    }
 
-        }
-        #bangladesh-image:hover{
-            transform: rotate(360deg);
-            transition: 2s;
-        }
-        .places {
-              box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-        .place {
-            background: linear-gradient(to bottom right,red, green);
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 10px;
-            text-align: center;
-        }
-        .place img {
-            max-width: 100%;
-            height: 400px;
-            width: 400px;
+    /* BUTTON */
+    .btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: goldenrod;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .btn:hover {
+      background: red;
+      transform: scale(1.1);
+    }
 
-            border-radius: 5px;
-        }
-        .place img:hover{
-           
-        transform: scale(.5);
-        transition: 2s;
-    
-         }
-
-        
-
-    </style>
+    /* PLACES GRID */
+    .places {
+      margin: 50px auto;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 20px;
+    }
+    .place {
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 25px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .place:hover {
+      transform: translateY(-10px);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 40px;
+    }
+    .place img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.4s;
+    }
+    .place img:hover {
+      transform: scale(1.05);
+    }
+    .place h1 {
+      font-size: 22px;
+      margin: 10px 0;
+      color: darkgreen;
+    }
+    .place p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>Welcome<br> to <br><span class="highlight"> Bangladesh</span></h1>
-            <img id="bangladesh-image" src="Bangladesh.jpg" alt="Bangladesh" >
-        </div>
-    </div>
-    <div class="places">
-        <div class="place">
-            <img src="https://bdscenictours.b-cdn.net/wp-content/uploads/2019/11/Exploring-Coxs-Bazar.jpg" alt="Place 1">
-            <h1>Cox's Bazar</h1>
-        </div>
-        <div class="place">
-            <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/06/29/983a5752ef7bdbf6b5465197e079e85f_1000x1000.jpg" alt="Place 2">
-            <h1>Bandarban</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Martins_Island_with_boats_in_foreground.jpg" alt="Place 3">
-            <h1>Saint Martin's Island</h1>
-        </div>
-        <div class="place">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Teesta_Barrage_Bangladesh.jpg/330px-Teesta_Barrage_Bangladesh.jpg" alt="Place 4">
-            <h1>Teesta Barrage Rangpur</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0.jpg/1280px-%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0.jpg" alt="Place 4">
-            <h1>Rajshahi Division</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bangladesh_Agricultural_University_%28BAU%29.jpg/330px-Bangladesh_Agricultural_University_%28BAU%29.jpg" alt="Place 5">
-            <h1>Bangladesh Agricultural University Mymensingh</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Dhaka_April_%2833244268934%29.jpg/330px-Dhaka_April_%2833244268934%29.jpg" alt="Place 6">
-            <h1>The Capital Dhaka</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/%E0%A6%B7%E0%A6%BE%E0%A6%9F-%E0%A6%97%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%81%E0%A6%9C-%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6.jpg/330px-%E0%A6%B7%E0%A6%BE%E0%A6%9F-%E0%A6%97%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%81%E0%A6%9C-%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6.jpg" alt="Place 7">
-            <h1>Khulna</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Kuakata_beach_at_morning.jpg" alt="Place 4">
-            <h1>Kuakata Beach Barishal</h1>
-        </div>
-        <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Chittagong_Port.jpg/960px-Chittagong_Port.jpg" alt="Place 8">
-            <h1>Chittagong Port</h1>
-        </div>
-        
 
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Bangladesh</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#places">Places</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="container">
+    <div class="content">
+      <h1>Welcome to <span class="highlight">Bangladesh</span></h1>
+      <img id="bangladesh-image" src="Bangladesh.png" alt="Bangladesh">
+      <br>
+      <button class="btn">Explore</button>
     </div>
+  </div>
+
+  <!-- PLACES SECTION -->
+  <div class="places" id="places">
+    <div class="place">
+      <img src="https://bdscenictours.b-cdn.net/wp-content/uploads/2019/11/Exploring-Coxs-Bazar.jpg" alt="Cox's Bazar">
+      <h1>Cox's Bazar</h1>
+      <p>Cox’s Bazar, in southeastern Bangladesh, boasts the world’s longest unbroken sea beach, stretching 120 km along the Bay of Bengal. Known as the “Tourist Capital,” it offers golden sand, rolling waves, and beautiful sunsets.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/06/29/983a5752ef7bdbf6b5465197e079e85f_1000x1000.jpg" alt="Bandarban">
+      <h1>Bandarban</h1>
+      <p>Bandarban is a hill district rich in natural beauty, waterfalls, and tribal culture. It’s home to Nilgiri Hills, Nafakhum Falls, and peaceful Buddhist monasteries.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Martins_Island_with_boats_in_foreground.jpg" alt="Saint Martin's Island">
+      <h1>Saint Martin's Island</h1>
+      <p>Saint Martin’s Island is Bangladesh’s only coral island, famous for its crystal-clear waters, coconut trees, and a serene environment ideal for relaxation.</p>
+    </div>
+
+    <div class="place">
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Teesta_Barrage_Bangladesh.jpg/330px-Teesta_Barrage_Bangladesh.jpg" alt="Teesta Barrage">
+      <h1>Teesta Barrage Rangpur</h1>
+      <p>The Teesta Barrage is an irrigation and flood control project in Rangpur, providing a scenic view of the mighty Teesta River.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0.jpg" alt="Paharpur">
+      <h1>Rajshahi Division</h1>
+      <p>Paharpur’s Somapura Mahavihara in Rajshahi is a UNESCO World Heritage Site, showcasing Bangladesh’s ancient Buddhist heritage.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Bangladesh_Agricultural_University_%28BAU%29.jpg" alt="BAU">
+      <h1>Bangladesh Agricultural University</h1>
+      <p>Located in Mymensingh, BAU is the largest institution for agricultural studies in Bangladesh, contributing greatly to research and innovation.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Dhaka_April_%2833244268934%29.jpg" alt="Dhaka">
+      <h1>The Capital Dhaka</h1>
+      <p>Dhaka, the capital city, is a vibrant hub of culture, history, and modern development, known for Lalbagh Fort, Ahsan Manzil, and bustling markets.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/%E0%A6%B7%E0%A6%BE%E0%A6%9F-%E0%A6%97%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%81%E0%A6%9C-%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6.jpg" alt="Khulna">
+      <h1>Khulna</h1>
+      <p>Khulna is the gateway to the Sundarbans mangrove forest, home to the Royal Bengal Tiger and unique biodiversity.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Kuakata_beach_at_morning.jpg" alt="Kuakata Beach">
+      <h1>Kuakata Beach</h1>
+      <p>Kuakata, known as the “Daughter of the Sea,” is one of the few beaches in the world where both sunrise and sunset can be seen over the ocean.</p>
+    </div>
+
+    <div class="place">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Chittagong_Port.jpg" alt="Chittagong Port">
+      <h1>Chittagong Port</h1>
+      <p>Chittagong is Bangladesh’s largest seaport and a major commercial hub, blending trade importance with natural beauty.</p>
+    </div>
+  </div>
+
 </body>
 </html>
